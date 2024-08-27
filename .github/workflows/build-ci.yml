@@ -64,7 +64,7 @@ jobs:
           SHA: ${{ needs.prepare.outputs.sha }}
         working-directory: /builder
         run: |
-          echo "src-link youtubeUnblock $GITHUB_WORKSPACE" >> feeds.conf
+          echo "src-link youtubeUnblock https://github.com/saschasid/youtubeUnblock.git" >> feeds.conf
           cat feeds.conf
           ./scripts/feeds update youtubeUnblock
           ./scripts/feeds install -a -p youtubeUnblock
